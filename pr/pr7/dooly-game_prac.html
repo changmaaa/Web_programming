@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dooly game</title>
+    <style>
+        body {
+            width: 100vh;
+            height: 100vh;
+            overflow: hidden; /* Hide horizontal scrollbar */
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <p><실습 7. 둘리를 잡아라> 학번: 201902332 이름: 유창민</p><br>
+    <p>Score <input type="text" id="score" size="5" value="0" />  Step <input type="text" id="step" size="5" value="1" /></p><br>
+    <img id = "dooly" src="dooly.jpg" width="100px" style="position: absolute; left: 50px; top: 120px; cursor: pointer;"
+    onmousedown="increasing()">
+    <script>
+        let score = 0;
+        let step = 1;
+        let directionX = 1;
+        let directionY = 1;
+
+        const dooly = document.getElementById('dooly');
+        const scoretemp = document.getElementById('score');
+        const steptemp = document.getElementById('step');
+
+        function moveDooly() {
+            const nowwidthpos = parseInt(dooly.style.left) || 0;
+            const nowheightpos = parseInt(dooly.style.top) || 0;
+        
+            const maxWidth = window.innerWidth - dooly.width;
+            const maxHeight = window.innerHeight - dooly.height;
+        
+            if (nowwidthpos >= maxWidth || nowwidthpos <= 0) {
+                directionX = directionX * (-1);
+            }
+        
+            if (nowheightpos >= maxHeight || nowheightpos <= 0) {
+                directionY = directionY * (-1);
+            }
+        
+            const newHorizontalPos = nowwidthpos + (step * directionX);
+            const newVerticalPos = nowheightpos + (step * directionY);
+        
+            dooly.style.left = newHorizontalPos + 'px';
+            dooly.style.top = newVerticalPos + 'px';
+        }
+        
+        function increasing() {
+            score = score + 10;
+            step = step * 2;
+            scoretemp.value = score;
+            steptemp.value = step;
+        }
+
+        setInterval(moveDooly, 100);
+    </script>
+</body>
+</html>

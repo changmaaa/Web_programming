@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환율 계산기</title>
+</head>
+<body>
+    <p>학번: 201902332 이름: 유창민</p>
+    <h2>기말시험 2.환율 계산기</h2>
+    <form method="get" action="http://localhost:54321/search.money"> 
+        <input type="text" name="number" value="100">
+        <select name="country" value="USD">
+            <option value="USD">미국(USD)</option>
+            <option value="EUR">유로(EUR)</option>
+            <option value="KRW">한국(KRW)</option>
+            <option value="JPY">일본(JPY)</option>
+        </select>
+        <button type="submit">환율 계산</button>
+    </form>
+    <script>
+        function formatNumber(num) {
+            const roundedNum = Math.round(num);
+            
+            return new Intl.NumberFormat().format(roundedNum);
+          }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+h1 {
+    font: italic bold 50px consolas, sans-serif;
+    color: red;
+}
+div {
+    background-image: url("media/back.jpeg");
+    background-size: cover;
+    background-repeat: repeat;
+    background-size: 300px 300px;
+}
+div {
+    border: 3px groove skyblue;
+    box-shadow: 5px 5px 5px #000000;
+}
+.redBox {
+    border: 3px groove red;
+    box-shadow: 5px 5px 5px #000000;
+}
+.tc1 {
+    background-color: skyblue;
+}
+.tc2 {
+    background-color: #88e7a5;
+}
+.tc3 {
+    background-color: #11785e;
+}
+.tc4 {
+    background-color: #bad122;
+}
+.tc5 {
+    background-color: #2a616e;
+}
+.tc6 {
+    background-color: #aa17a5;
+}
+.tc7 {
+    background-color: #d59595;
+}
+.tc8 {
+    background-color: #e87808;
+}
+.tc9 {
+    background-color: #b8ac8a;
+}

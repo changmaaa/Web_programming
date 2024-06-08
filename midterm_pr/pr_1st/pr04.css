@@ -1,0 +1,92 @@
+#r1 {
+    position : absolute;
+    width: 100px;
+    height: 100px;
+    border : 7px outset skyblue;
+    border-radius: 0px 60px;
+    padding : 20px 20px 20px 20px;
+    margin : 20px;
+    font-size : 30px;
+    color : white;
+    text-align: center;
+    left : 0px; top : 0px;
+    animation-name : colbox1;
+    animation-duration : 4s;
+    animation-iteration-count : infinite;
+}
+#r2 {
+    position : absolute;
+    width: 100px;
+    height: 100px;
+    border : 7px outset skyblue;
+    border-radius: 60px 0px;
+    padding: 20px 20px 20px 20px;
+    margin : 20px;
+    font-size : 30px;
+    color : white;
+    text-align: center;
+    left : 160px; top : 0px;
+    animation-name : colbox2;
+    animation-duration : 4s;
+    animation-iteration-count : infinite;
+}
+#r3 {
+    position : absolute;
+    width: 100px;
+    height: 100px;
+    border : 7px outset skyblue;
+    border-radius: 0px 60px;
+    padding: 20px 20px 20px 20px;
+    margin : 20px;
+    font-size: 30px;
+    color : white;
+    text-align: center;
+    left : 160px; top : 160px;
+    animation-name : colbox3;
+    animation-duration : 4s;
+    animation-iteration-count : infinite;
+}
+#r4 {
+    position : absolute;
+    width: 100px;
+    height: 100px;
+    border : 7px outset skyblue;
+    border-radius: 60px 0px;
+    padding: 20px 20px 20px 20px;
+    margin : 20px;
+    font-size: 30px;
+    color : white;
+    text-align: center;
+    left : 0px; top : 160px;
+    animation-name : colbox4;
+    animation-duration : 4s;
+    animation-iteration-count : infinite;
+}
+@keyframes colbox1 {
+    0% {background-color: red;}
+    25% {background-color: green;}
+    50% {background-color: blue;}
+    75% {background-color: magenta;}
+    100% {background-color: red;}
+}
+@keyframes colbox2 {
+    0% {background-color: magenta;}
+    25% {background-color: red;}
+    50% {background-color: green;}
+    75% {background-color: blue;}
+    100% {background-color: magenta;}
+}
+@keyframes colbox3 {
+    0% {background-color: blue;}
+    25% {background-color: magenta;}
+    50% {background-color: red;}
+    75% {background-color: green;}
+    100% {background-color: blue;}
+}
+@keyframes colbox4 {
+    0% {background-color: green;}
+    25% {background-color: blue;}
+    50% {background-color: magenta;}
+    75% {background-color: red;}
+    100% {background-color: green;}
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rainbow Flower</title>
+    <style>
+        .petal1 {
+            position : absolute;
+            width: 100px;
+            height: 100px;
+            border : 7px outset skyblue;
+            border-radius: 0px 80px;
+            padding : 20px;
+            margin : 20px;
+            font-size : 30px;
+            color : white;
+            z-index : 1; left : 0px; top : 0px;
+            animation: rainbow1 4s infinite;
+            text-align: center;
+        }
+        .petal2 {
+            position : absolute;
+            width: 100px;
+            height: 100px;
+            border : 7px outset skyblue;
+            border-radius: 80px 0px;
+            padding : 20px;
+            margin : 20px;
+            font-size : 30px;
+            color : white;
+            z-index : 2; left : 160px; top : 0px;
+            animation: rainbow4 4s infinite;
+            text-align: center;
+        }
+        .petal3 {
+            position : absolute;
+            width: 100px;
+            height: 100px;
+            border : 7px outset skyblue;
+            border-radius: 0px 80px;
+            padding : 20px;
+            margin : 20px;
+            font-size : 30px;
+            color : white;
+            z-index : 3; left : 160px; top : 160px;
+            animation: rainbow3 4s infinite;
+            text-align: center;
+        }
+        .petal4 {
+            position : absolute;
+            width: 100px;
+            height: 100px;
+            border : 7px outset skyblue;
+            border-radius: 80px 0px;
+            padding : 20px;
+            margin : 20px;
+            font-size : 30px;
+            color : white;
+            z-index : 4; left : 0px; top : 160px;
+            animation: rainbow2 4s infinite;
+            text-align: center;
+        }
+
+        @keyframes rainbow1{
+            0% {
+                background-color: red;
+            }
+            25% {
+                background-color: green;
+            }
+            50% {
+                background-color: blue;
+            }
+            75% {
+                background-color: magenta;
+            }
+            100% {
+                background-color: red;
+            }
+        }
+        @keyframes rainbow2{
+            0% {
+                background-color: green;
+            }
+            25% {
+                background-color: blue;
+            }
+            50% {
+                background-color: magenta;
+            }
+            75% {
+                background-color: red;
+            }
+            100% {
+                background-color: green;
+            }
+        }
+        @keyframes rainbow3{
+            0% {
+                background-color: blue;
+            }
+            25% {
+                background-color: magenta;
+            }
+            50% {
+                background-color: red;
+            }
+            75% {
+                background-color: green;
+            }
+            100% {
+                background-color: blue;
+            }
+        }
+        @keyframes rainbow4{
+            0% {
+                background-color: magenta;
+            }
+            25% {
+                background-color: red;
+            }
+            50% {
+                background-color: green;
+            }
+            75% {
+                background-color: blue;
+            }
+            100% {
+                background-color: magenta;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="petal1"><br>HTML</div>
+    <div class="petal2"><br>CSS</div>
+    <div class="petal3"><br>WEB</div>
+    <div class="petal4"><br>JS</div>
+</body>
+</html>

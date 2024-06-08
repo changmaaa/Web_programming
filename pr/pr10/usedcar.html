@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중고차 검색</title>
+    <style>
+        button {
+            width: 72px;
+        }
+        .button {
+            margin-top: 10px;
+            margin-left: 40px;
+        }
+        select {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>중고차 검색</h2>
+    <form method="get" action="http://localhost:54321/search.usedcar">
+        차종 :
+        <input type="radio" name="model" value="전체" checked>전체
+        <input type="radio" name="model" value="그랜저">그랜저
+        <input type="radio" name="model" value="소나타">소나타
+        <input type="radio" name="model" value="아반떼">아반떼
+        <br>
+        색상 :
+        <select name="color" value="1">
+            <option value="전체" selected>전체</option>
+            <option value="black">black</option>
+            <option value="white">white</option>
+            <option value="기타">기타</option>
+        </select>
+        <br>
+        가격 :
+        <select name="price" value="1">
+            <option value="전체" selected>전체</option>
+            <option value="2000">2000만원~</option>
+            <option value="1000">1000만원~1990만원</option>
+            <option value="990">~990만원</option>
+        </select>
+        <br>
+        <div class="button">
+            <button type="reset">초기화</button>
+            <button type="submit">검색</button>
+        </div>
+    </form>
+</body>
+</html>

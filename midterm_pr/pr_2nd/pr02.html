@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>식당 예약</title>
+</head>
+<style>
+    input[type=text], input[type=tel], input[type=date], input[type=time] {
+        border : 1px solid black;
+        border-radius : 3px;
+        margin-bottom : 5px;
+    }
+</style>
+<body>
+    <h2>식당 예약하기</h2>
+    <form>
+        <fieldset>
+            <legend>예약자 정보</legend>
+            <label>예약자 : <input type="text" name="name" id="name"></label><br>
+            <label>연락처 : <input type="tel" name="phone" id="phone" placeholder="010-1234-5678" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" ></label><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>예약 정보</legend>
+            <label>날짜 : <input type="date" value="2023-10-03"></label><br>
+            <label>시간 : <input type="time" value="18:00"></label><br>
+            <label>예약 인원 : 
+                <select name="people">
+                    <option value="2">2명</option>
+                    <option value="3">3명</option>
+                    <option value="4" selected>4명</option>
+                    <option value="5">5명</option>
+                    <option value="6">6명</option>
+                    <option value="7">7명</option>
+                    <option value="8">8명</option>
+                </select>
+            </label><br>
+            위치 : 
+            <label>본관<input type="radio" name="location" value="본관" checked></label>
+            <label>별관<input type="radio" name="location" value="별관"></label><br>
+            옵션 :
+            <label>아기의자<input type="checkbox" value="아기의자"></label>
+            <label>채식요리<input type="checkbox" value="채식요리"></label>
+            <label>단독룸<input type="checkbox" value="단독룸"></label>
+        </fieldset>
+        <br>
+        <label><button type="submit">예약</button> <button type="reset">취소</button></label>
+    </form>
+</body>
+</html>

@@ -1,0 +1,3 @@
+command+k v 누르면 html preview 옵션 사용 가능
+comman shift v 누르면 전체 장으로 preview 볼 수 있음
+https://developer.mozilla.org/ko/docs/Web/HTML -> HTML 레퍼런스

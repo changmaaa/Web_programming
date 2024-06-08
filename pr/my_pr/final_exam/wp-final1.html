@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unit Converter</title>
+</head>
+<style>
+    .yellow_box {
+        width: 150px;
+        height: 30px;
+        background-color: yellow;
+        text-align: right;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+    .blue_box {
+        width: 150px;
+        height: 30px;
+        background-color: skyblue;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <p>학번: 201902332 이름: 유창민</p>
+    <h2>기말시험 1. 단위변환</h2>
+    <input type="text" class="yellow_box" id="inputValue" value="1" step="any" oninput="convertUnits()">
+    <select class="blue_box" id="inputUnit" onchange="convertUnits()">
+        <option value="cm">센티미터(cm)</option>
+        <option value="m">미터(m)</option>
+        <option value="mm">밀리미터(mm)</option>
+        <option value="km">킬로미터(km)</option>
+        <option value="in">인치(in)</option>
+        <option value="ft">피트(ft)</option>
+        <option value="yd">야드(yd)</option>
+        <option value="mile">마일(mile)</option>
+    </select>
+    <input type="text" class="yellow_box" id="outputValue" readonly>
+    <select class="blue_box" id="outputUnit" onchange="convertUnits()">
+        <option value="in">인치(in)</option>
+        <option value="ft">피트(ft)</option>
+        <option value="yd">야드(yd)</option>
+        <option value="mile">마일(mile)</option>
+        <option value="cm">센티미터(cm)</option>
+        <option value="m">미터(m)</option>
+        <option value="mm">밀리미터(mm)</option>
+        <option value="km">킬로미터(km)</option>
+    </select>
+    <div id="final"></div>
+
+    <script>
+    function convertUnits() {
+        const inputValue = parseFloat(document.getElementById('inputValue').value);
+        const inputUnit = document.getElementById('inputUnit').value;
+        const outputUnit = document.getElementById('outputUnit').value;
+        let result;
+
+        if (inputUnit == outputUnit) {
+        result = inputValue;
+    } 
+        else if (inputUnit == '센티미터(cm)' || inputUnit == '미터(m)' || inputUnit == '밀리미터(mm)' || inputUnit == '킬로미터(km)') {
+        const meters = convertToMeters(inputValue, inputUnit);
+        result = convertFromMeters(meters, outputUnit);
+    } 
+        else {
+        const miles = convertToMiles(inputValue, inputUnit);
+        result = convertFromMiles(miles, outputUnit);
+    }
+
+        document.getElementById('outputValue').value = result.toPrecision(10);
+        displayfinal(inputValue, inputUnit, result, outputUnit);
+    }
+
+    function convertToMeters(value, unit) {
+        switch (unit) {
+            case '밀리미터(mm)':
+                return value / 1000;
+            case '센티미터(cm)':
+                return value / 100;
+            case '킬로미터(km)':
+                return value * 1000;
+            case '미터(m)':
+            default:
+                return value;
+            }
+    }
+
+    function convertFromMeters(value, unit) {
+        switch (unit) {
+            case '밀리미터(mm)':
+                return value * 1000;
+            case '센티미터(cm)':
+                return value * 100;
+            case '킬로미터(km)':
+                return value / 1000;
+            case '인치(in)':
+                return value / 39.3700787;
+            case '피트(ft)':
+                return value / 3.2808399;
+            case '야드(yd)':
+                return value / 1.0936133;
+            case '마일(mile)':
+                return value / 0.000621371192;
+            case '미터(m)':
+            default:
+                return value;
+            }
+    }
+
+    function convertToMiles(value, unit) {
+        switch (unit) {
+            case '인치(in)':
+                return value / 63360;
+            case '피트(ft)':
+                return value / 5280;
+            case '야드(yd)':
+                return value / 1760;
+            case '센티미터(cm)':
+                return value / 1609344.4;
+            case '미터(m)':
+                return value / 1609.344;
+            case '밀리미터(mm)':
+                return value / 1609344;
+            case '킬로미터(km)':
+                return value / 1.609344;
+            case '마일(mile)':
+            default:
+                return value;
+            }
+    }
+
+    function convertFromMiles(value, unit) {
+        switch (unit) {
+        case 'in':
+            return value * 63360;
+        case 'ft':
+            return value * 5280;
+        case 'yd':
+            return value * 1760;
+        case 'mile':
+        default:
+            return value;
+        }
+    }
+
+    function displayfinal(inputValue, inputUnit, result, outputUnit) {
+        const conversions = ['mm', 'cm', 'm', 'km', 'in', 'ft', 'yd', 'mile'];
+        const final = document.getElementById('final');
+        final.innerHTML = '';
+
+        conversions.forEach(unit => {
+        if (unit !== inputUnit && unit !== outputUnit) {
+            let convertedValue;
+            if (inputUnit == 'cm' || inputUnit == 'm' || inputUnit == 'mm' || inputUnit == 'km') {
+            const meters = convertToMeters(inputValue, inputUnit);
+            convertedValue = convertFromMeters(meters, unit);
+            } 
+            else {
+            const miles = convertToMiles(inputValue, inputUnit);
+            convertedValue = convertFromMiles(miles, unit);
+            }
+            const paragraph = document.createElement('p');
+            paragraph.textContent = `${result.toPrecision(10)} ${outputUnit} = ${convertedValue.toPrecision(10)} ${unit}`;
+            final.appendChild(paragraph);
+        }
+        });
+    }
+
+    // Set initial values
+    document.getElementById('inputUnit').value = 'cm';
+    document.getElementById('outputUnit').value = 'in';
+    convertUnits(); // Perform initial conversion
+    </script>
+
+</body>
+</html>

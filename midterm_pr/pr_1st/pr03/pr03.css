@@ -1,0 +1,51 @@
+h1 {
+    font-family: 'Alumni Sans Collegiate One', cursive;
+    color: red;
+}
+div {
+    background-image: url('/Users/yuchangmin/3_2/web_programming/pr/pr3/media/back.jpeg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-size: 30px 30px;
+    border : 5px groove yellow;
+    box-shadow: 5px 5px 5px 5px black;
+    cursor: pointer;
+}
+th, td {
+    height : 50px;
+    width : 100px;
+    text-align : center;
+}
+
+#redbox {
+    border: 5px groove red;
+    box-shadow: 5px 5px 5px black;
+    cursor: wait;
+}
+#t1 {
+    background-color: skyblue;
+}
+#t2 {
+    background-color: #88e7a5;
+}
+#t3 {
+    background-color: #11785e;
+}
+#t4 {
+    background-color: #bad122;
+}
+#t5 {
+    background-color: #2a616e;
+}
+#t6 {
+    background-color: #aa17a5;
+}
+#t7 {
+    background-color: #d59595;
+}
+#t8 {
+    background-color: #e87808;
+}
+#t9 {
+    background-color: #b8ac8a;
+}

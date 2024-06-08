@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>neon sign</title>
+</head>
+<body>
+    <script>
+        let text = "유하경은 참 귀엽다  ";
+        function randComp() { return Math.round(Math.random()*256); }
+
+        window.onload = function() {
+            setInterval(() => {
+                const elem = document.getElementById("board");
+                text = text.slice(1) + text.slice(0,1);
+                elem.innerText = text;
+                elem.style.color = `rgb(${randComp()},${randComp()},${randComp()})`;
+            }, 200);
+        }
+    </script>
+    <h1 id="board"></h1>
+</body>
+</html>

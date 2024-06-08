@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Dooly move</title>
+    </head>
+    <body style="width: 500px; height: 500px;">
+        <img
+            id="dooly"
+            src="dooly.jpg"
+            width="100px"
+            style="position: absolute; left: 50px; top: 120px;"/>
+        <form>
+            마우스로 이미지를 클릭하면 움직이기 시작합니다.<br>
+            다시 클릭하면 움직임이 멈춤니다.<br><br>
+            Mouse Position: (X, Y)=(
+            <input id="x" type="text" size="1"/>,
+            <input id="y" type="text" size="1"/>)
+        </form>
+        <script>
+            let canMove = false;
+            document.body.onmousemove = moveLintener;
+            document
+                .getElementById("dooly")
+                .onclick = toggleMove;
+            function toggleMove() {
+                canMove = !canMove;
+            }
+            function moveLintener() {
+                let mouseX = window.event.clientX;
+                let mouseY = window.event.clientY;
+                document
+                    .getElementById("x")
+                    .value = mouseX;
+                document
+                    .getElementById("y")
+                    .value = mouseY;
+                if (canMove) {
+                    document
+                        .getElementById("dooly")
+                        .style
+                        .left = (mouseX - 50) + "px";
+                    document
+                        .getElementById("dooly")
+                        .style
+                        .top = (mouseY - 70) + "px";
+                }
+            }
+        </script>
+    </body>
+</html>

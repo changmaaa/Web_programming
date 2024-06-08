@@ -1,0 +1,48 @@
+h1 {
+    font-family: 'Alumni Sans Collegiate One', sans-serif;
+    font-family: 'Nosifer', sans-serif;
+    color: red;
+}
+div {
+    background-image : url('/Users/yuchangmin/3_2/digital_image/HW/HW2/test.jpg');
+    background-size: 100px 100px;
+    background-repeat: repeat;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px gray;
+}
+.redbox {
+    border: 1px groove yellow;
+    box-shadow: 5px 5px 5px red;
+}
+#tr1 {
+    background-color: red;
+}
+#tr2 {
+    background-color: blue;
+}
+#tr3 {
+    background-color: green;
+}
+#tr4 {
+    background-color: yellow;
+}
+#tr5 {
+    background-color: pink;
+}
+#tr6 {
+    background-color: orange;
+}
+#tr7 {
+    background-color: purple;
+}
+#tr8 {
+    background-color: brown;
+}
+th {
+    background-color: gray;
+}
+th, td {
+    height : 30px;
+    width : 100px;
+    text-align : center;
+}

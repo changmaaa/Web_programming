@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중간고사 2번</title>
+    <style>
+    input[type=time] {
+        transition : 0.5s;
+        font-size : 150%;
+        background-color : skyblue;
+        color : red;
+        width : 230px;
+    }
+    input[type=time]:hover {
+        background-color : yellow;
+    }
+    input[type=text] {
+        width : 195px;
+        border-radius : 5px;
+        border: 1px solid black;
+    }
+    select{
+        border-radius : 5px;
+        border: 1px solid black;
+    }
+    fieldset {
+        width : 250px;
+        border-radius : 10px;
+        position: relative;
+    }
+    legend {
+        font-size : 150%;
+        font-weight : bold;
+    }
+    button[type=submit] {
+        position: absolute;
+        left : 220px;
+        background-color: pink;
+        border : 1px solid black;
+        border-radius : 5px;
+    }
+    button[type=reset] {
+        position: absolute;
+        border : 1px solid black;
+        border-radius : 5px;
+    }
+    button[type=button] {
+        position: absolute;
+        border : 1px solid black;
+        border-radius : 5px;
+        left : 60px;
+    }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>알람 설정</legend>
+            <label><input type="time" name="time" value="06:00"></label><br>
+            <br>
+            <label>&nbsp;일&ensp;&ensp;월&ensp;&ensp; 화&ensp;&ensp;수&ensp;&ensp; 목&ensp;&ensp; 금&ensp;&ensp;토<br>
+                <input type="checkbox" name="day" value="일">&ensp;
+                <input type="checkbox" name="day" value="월" checked>&ensp;
+                <input type="checkbox" name="day" value="화" checked>&ensp;
+                <input type="checkbox" name="day" value="수" checked>&ensp;
+                <input type="checkbox" name="day" value="목" checked>&ensp;
+                <input type="checkbox" name="day" value="금" checked>&ensp;
+                <input type="checkbox" name="day" value="토">
+            </label><br>
+            <br>
+            <label>메모 <input type="text" name="memo" value="출근하자!"></label><br>
+            <br>
+            <label>알람 사운드 
+                <select name="sound">
+                    <option value="1" selected>Bell</option>
+                    <option value="2">Beep</option>
+                    <option value="3">Ding</option>
+                    <option value="4">Dong</option>
+                    <option value="5">Laser Beam</option>
+                    <option value="6">Piano</option>
+            </select></label><br>
+            <br>
+            다시 울림 <label>&ensp;1회<input type="radio" name="repeat" value="1" checked></label>
+            <label>&ensp;2회<input type="radio" name="repeat" value="2"></label>
+            <label>&ensp;3회<input type="radio" name="repeat" value="3"></label><br>
+            <br>
+            <label>음량 &ensp;10<input type="range" name="volume" min="0" max="30" value="20"></label>30<br>
+        </fieldset>
+        <br>
+        <label><button type="reset">초기화</button></label>
+        <label><button type="button">취소</button></label>
+        <label><button type="submit">알람 등록</button></label>
+    </form>
+</body>
+</html>

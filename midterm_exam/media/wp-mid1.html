@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    th {
+        border: 1px solid black;
+        border-radius: 10px;
+        animation-name : colorchange;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    c {
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    @keyframes colorchange {
+        0% {background-color: red;}
+        33% {background-color: green;}
+        66% {background-color: blue;}
+        100% {background-color: red;}
+    }
+    .hov:hover {
+        background-color: skyblue;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+        border-radius : 10px;
+    }
+    
+</style>
+<body>
+<table>
+    <tr>
+        <th>예술 채널</th>
+        <th rowspan="5"><iframe width="560" height="315" name="photo" src="https://www.youtube.com/embed/9NjFbz6vGU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></th>
+    </tr>
+    <tr>
+        <td class="hov">
+            <c><a href="starry night.jpg" target="photo">
+                <img src="starry night.jpg" alt="별이 빛나는 밤" width="100" height="75"></a></c>
+            <br>
+            <span>별이 빛나는 밤</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="hov">
+            <c><a href="waterlilies.jpg" target="photo">
+                <img src="waterlilies.jpg" alt="수련" width="100" height="75"></a></c>
+            <br>
+            <span>수련</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="hov">
+            <c><a href="#"><img src="midnight in paris.jpg" alt="미드나잇 인 파리" width="100" height="75"></a></c>
+            <br>
+            <span>미드나잇 인 파리</span>
+        </td>
+    </tr>
+    <tr>
+        <td class="hov">
+            <c><a href="#"><img src="mmca.png" alt="국립현대미술관" width="100" height="75"></a></c>
+            <br>
+            <span>국립현대미술관</span>
+        </td>
+    </tr>
+    
+</table>
+</body>
+</html>

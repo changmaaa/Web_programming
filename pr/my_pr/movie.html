@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <style>
+        .button {
+            margin-top: 10px;
+            margin-left: 40px;
+        }
+        input[type=text] {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+            
+    </style>
+</head>
+<body>
+    <script>
+        function check() {
+            const title = document.getElementsByName('title')[0].value;
+            const rate = document.getElementsByName('rate')[0].value;
+            if (title == '' || rate == '') {
+                alert('영화명과 예매율 기준치를 입력해주세요.');
+                return false;
+            }
+            return true;
+        }
+
+        window.onload = function() {
+            const start = document.getElementById('start');
+            text = start.innerHTML;
+            start.innerHTML = '';
+            let i = 0;
+            const timer = setInterval(function() {
+                if (i < text.length) {
+                    start.innerHTML += text[i];
+                    i++;
+                } else {
+                    clearInterval(timer);
+                }
+            }, 100);
+        }
+         
+    </script>
+    <h2 id="start">Movie Search Let's get it~!</h2>
+    <form method="get" action="http://localhost:54321/search.movie" onsubmit="return check()">
+        영화명 : 
+        <input type="text" name="title" placeholder="띄어쓰기도 본다 쿄쿙" value="전체">
+        <br>
+        예매율 기준치 :
+        <input type="text" name="rate" placeholder="이상인 것만 보여드릴게" value="전체">
+        <div class="button">
+            <button type="reset">초기화</button>
+            <button type="submit">검색</button>
+        </div>
+    </form>
+    
+</body>
+</html>

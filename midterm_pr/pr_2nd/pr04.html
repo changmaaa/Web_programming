@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무지개꽃 만들기</title>
+</head>
+<style>
+    div {
+        width : 80px;
+        height : 80px;
+        padding : 40px 20px 0px;
+        margin : 0px;
+        position: absolute;
+        font-size: 25px;
+        border : 10px outset skyblue;
+        text-align: center;
+    }
+    #f1 {
+        border-radius : 0 60px;
+        left : 0px; top : 0px;
+        animation-name : r1;
+        animation-duration : 4s;
+        animation-iteration-count : infinite;
+    }
+    @keyframes r1 {
+        0% {background-color: red;}
+        25% {background-color: green;}
+        50% {background-color: blue;}
+        75% {background-color: magenta;}
+        100% {background-color: red;}
+    }
+    #f2 {
+        border-radius : 60px 0px;
+        left : 145px; top : 0px;
+        animation-name : r2;
+        animation-duration : 4s;
+        animation-iteration-count : infinite;
+
+    }
+    @keyframes r2{
+        0% {background-color: magenta;}
+        25% {background-color: red;}
+        50% {background-color: green;}
+        75% {background-color: blue;}
+        100% {background-color: magenta;}
+    }
+    #f3 {
+        border-radius : 0px 60px;
+        left : 145px; top : 145px;
+        animation-name : r3;
+        animation-duration : 4s;
+        animation-iteration-count : infinite;
+    }
+    @keyframes r3{
+        0% {background-color: blue;}
+        25% {background-color: magenta;}
+        50% {background-color: red;}
+        75% {background-color: green;}
+        100% {background-color: blue;}
+    }
+    #f4 {
+        border-radius : 60px 0px;
+        left : 0px; top : 145px;
+        animation-name : r4;
+        animation-duration : 4s;
+        animation-iteration-count : infinite;
+    }
+    @keyframes r4{
+        0% {background-color: green;}
+        25% {background-color: blue;}
+        50% {background-color: magenta;}
+        75% {background-color: red;}
+        100% {background-color: green;}
+    }
+</style>
+<body>
+    <div id="f1">HTML</div>
+    <div id="f2">CSS</div>
+    <div id="f3">WEB</div>
+    <div id="f4">JS</div>
+</body>
+</html>
